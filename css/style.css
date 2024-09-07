@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #202020;
+    color: #FFFFFF;
+}
+
+html {
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.cabecalho {
+    background-color: #202020;
+
+}
+.cabecalho__menu {
+    padding: 0.5rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;    
+}
+
+.cabecalho__menu li a{
+    color: #F2F2F2;
+    font-family: Epilogue;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.cabecalho__menu li a:hover {
+    color: #C5A878;
+}
+
+.cabecalho__logo {
+    width: 20rem;
+}
+.cabecalho_menu-lista {
+    display: flex;
+    gap: 5rem;
+}
+.cabecalho__menu-agendar {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    border-radius: 0.5rem;
+    padding: 5px 7px ;
+    background-color: #303030;
+    border: none;
+    color: #F2F2F2;
+    font-family: Epilogue;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px #101010;
+    cursor: pointer;
+}
+
+.cabecalho__menu-agendar:hover {
+    background-color: #353535;
+    box-shadow: 2px 2px 10px #101010;
+}
+
+.cabecalho_menu-botao {
+    width: 1.5rem;
+}
+
+.principal {
+    background-color: #202020;
+}
+
+.hero {
+    height: 84vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #202020;
+}
+.hero__conteudo {
+    position: absolute;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    z-index: 2;
+}
+
+.hero__conteudo h1 {
+    font-family: Montserrat;
+    font-size: 4rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px #202020;
+}
+
+.hero__conteudo h2 {
+    font-family: Montserrat;
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px #202020;
+}
+
+.hero__botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    margin: 8rem;
+}
+
+.hero__botoes button {
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #2B2B2B;
+    opacity: 0.8;
+    color: #F2F2F2;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px #202020;
+    cursor: pointer;
+}
+
+.hero__botoes button:hover {
+    box-shadow: 2px 2px 8px #353535;
+}
+
+.hero__botoes button i {
+    color: #C5A878;
+    font-size: 1rem;
+}
+
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+.img1 {
+    opacity: 0.8;
+    animation: swap 15s infinite;
+}
+.img2 {
+    opacity: 0.8;
+    animation: swap 15s infinite;
+    animation-delay: 10s;
+}
+
+@keyframes swap {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    0% {opacity: 1}
+}
+
+.sobre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 8rem;
+
+    padding: 2rem 20rem;
+    margin: auto;
+    background-color: #303030;
+}
+
+.sobre__selo {
+    width: 15rem;
+}
+
+.sobre__conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.sobre__conteudo-titulos h2{
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.sobre__conteudo-titulos h3 {
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #C5A878;
+}
+
+.sobre__conteudo-texto {
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2rem 15rem;
+}
+
+.servicos__titulo {
+    font-family: Epilogue;
+    color: #F2F2F2;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.servicos__containercard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.servicos__card {
+    background-color: #241A1C;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 calc(50% - 1rem);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid #C6913A;
+}
+.servicos__card-img {
+    width: 7rem;
+    border-radius: 1rem;
+    box-shadow: 2px 0px 8px #202020;
+}
+.servicos__card-conteudo {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.servicos__card-conteudo span {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 700px;
+    color: #C6913A;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.servicos__card-conteudo p {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.agendamento {
+    background-color: #C5A878;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    padding: 2rem 20rem;
+}
+
+.agendamento h2 {
+    text-transform: uppercase;
+    font-family: Inter;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px rgba(32, 32, 32, 0.7);
+    font-size: 2rem;
+}
+
+.agendamento button {
+    padding: 0.7rem 1rem;
+    background-color: #EDB04C;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 3px #202020;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.agendamento button:hover {
+    background-color: #ebb257;
+    box-shadow: 3px 3px 8px rgba(32, 32, 32, 0.5);
+}
+
+.contato {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15rem;
+    margin: auto;
+    padding: 2rem 15rem;
+    background-color: #303030;
+    
+}
+.contato__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+
+.contato__container-logo {
+    width: 15rem;
+}
+
+.contato__container-informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.contato__container-informacoes h4{
+    font-family: Epilogue;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.contato__container-informacoes p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: Epilogue;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.contato__container-informacoes p img{
+    width: 1.5rem;
+}
+.contato__newletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato__newletter label {
+    font-family: Epilogue;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contato__newletter-form {
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+#newletter{
+    width: 23rem;
+    height: 2.5rem;
+    border: none;
+    padding: 0 1em;
+}
+
+#newletter:focus{
+    border: none;
+    outline: none;
+}
+
+.contato__newletter-botao {
+    height: 2.5rem;
+    border: none;
+    background-color: #C5A878;
+    padding: 0 1rem;
+    color: #F2F2F2;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.contato__newletter-botao:hover {
+    color: #202020;
+}
+
+.contato__socialmedia {
+   display: flex;
+   justify-content: end;
+   align-items: center;
+
+   margin-top: 1rem;
+   gap: 1rem;
+
+}
+
+.contato__socialmedia img{
+    width: 2rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #303030;
+}
+
+#social1:hover {
+    content: url("/img/social1_hover.png");
+    border-bottom: 2px solid #C5A878 ;
+}
+
+#social2:hover {
+    content: url("/img/social2_hover.png");
+    border-bottom: 2px solid #C5A878 ;
+}
+
+#social3:hover {
+    content: url("/img/social3_hover.png");
+    border-bottom: 2px solid #C5A878 ;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+.fotter__copy {
+    display: flex;
+    gap: 5px;
+    text-transform: uppercase;
+
+    font-family: Inter;
+    font-weight: 300;
+}
+.footer__copy-selo {
+
+}
+.footer__copy-empresa {
+    color: #ebb257;
+}
+.footer__desenvolvedor {
+    color: #F2F2F2;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+
+}
+.footer__desenvolvedor a{
+    color: #F2F2F2;
+}
